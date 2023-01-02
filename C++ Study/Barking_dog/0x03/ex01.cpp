@@ -2,7 +2,7 @@
 using namespace std;
 
 void insert(int idx, int num, int arr[], int& len){
-    for(i=len; i<len; i--){
+    for(int i=len; i>idx; i--){
         arr[i] = arr[i-1];
     }
     arr[idx] = num;
