@@ -11,7 +11,7 @@ int main(void){
     else cout << "Q is not empty\n";
     Q.pop();
     cout << Q.front() << '\n';
-    cout << Q.back() << '\n';
+    cout << Q.back() << '\n'; //문자일 때는 '' 문자열은 ""
     Q.push(40);
     Q.pop();
     cout << Q.front() << '\n';
