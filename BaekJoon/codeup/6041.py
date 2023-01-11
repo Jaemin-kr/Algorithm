@@ -8,4 +8,4 @@
 
 #6043
 a, b = list(map(float, input().split()))
-print(format(float(a%b), ".3f"))
+print(format(a/b, ".3f"))
