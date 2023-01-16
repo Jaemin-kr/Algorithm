@@ -1,8 +1,14 @@
 import sys
 
-a = list(map(int, sys.stdin.readline().split()))
-dif = a[1]-a[0]
-print(dif-1)
+a,b = map(int, sys.stdin.readline().split())
+a1 = min(a,b)
+b1 = max(a,b)
 
-for i in range(dif):
-    print(i+a[0],end=' ')
+dif = b1-a1-1
+
+if a1 == b1 or a1+1 == b1:
+    dif = 0
+print(dif)
+
+for i in range(a1+1,b1):
+    print(i, end=' ')
