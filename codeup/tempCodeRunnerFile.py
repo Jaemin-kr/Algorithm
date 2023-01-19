@@ -1,2 +1,6 @@
-a, b = map(int,input().split())
-print(a&b)
+
+c = 1
+
+while ord('q') != c:
+    c = ord(input())
+    print(c)
