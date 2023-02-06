@@ -1,22 +1,24 @@
 import sys
+from collections import deque
 
 T = int(sys.stdin.readline())
-ans = []
-cursor = 0
+
+
 for _ in range(T):
-    pwd = list(map(str, sys.stdin.readline()))
+    front = deque()
+    back = deque()
 
-print(pwd[0])
-
-for i in range(len(pwd)):
-    if pwd[i] == '<':
-        if len(ans) != 0:
-            cursor -= 1
+    for item in input():
+        if item == '<':
+            if front:
+                back.appendleft(front.pop())
+        elif item == '>':
+            if back:
+                front.append(back.popleft())
+        elif item == '-':
+            if front:
+                front.pop()
         else:
-            continue
-    elif pwd[i] == '-':
-        if len(ans) != 0:
-            ans.pop()
-        else:
-            continue
-    
+            front.append(item)
+    front.extend(back)
+    print(''.join(front))
