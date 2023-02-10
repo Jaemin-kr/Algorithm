@@ -20,5 +20,7 @@ for _ in range(int(sys.stdin.readline())):
     else:
         word.append(cmd[1])
 
+print("word", word)
+print("word1", word1)
 word.extend(reversed(word1))
 print(''.join(word))
