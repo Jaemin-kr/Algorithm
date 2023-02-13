@@ -1,4 +1,4 @@
 import sys
 
 a, b= map(int, sys.stdin.readline().split())
-print(a*2<<(b))
+print(a<<b)
