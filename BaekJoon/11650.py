@@ -1,10 +1,13 @@
-import sys
 
-input = sys.stdin.readline
 xy = []
 n = int(input())
+
 for i in range(n):
-    cord = list(map(int, input().split))
+    cord = list(map(int,input().split()))
     xy.append(cord)
 
-print(xy.sort())
+xy = sorted(xy)
+#print(xy)
+for i in range(n):
+    xy_str = str(xy[i])[1:-1]
+    print(xy_str.replace(",",""))

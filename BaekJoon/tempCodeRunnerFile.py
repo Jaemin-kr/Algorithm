@@ -1,17 +1,13 @@
-import sys
 
-input = sys.stdin.readline
-new_a = []
-new_b = []
-a, b = map(int,input().split())
-for i in range(3):
-    new_a.append(a%10)
-    a = a//10
-    new_b.append(b%10)
-    b = b//10
+xy = []
+n = int(input())
 
-for i in range(3):
-    if new_a[i] > new_b[i]:
-        print("".join(map(str,new_a)))
-    else:
-        print("".join(map(str,new_b)))
+for i in range(n):
+    cord = list(map(int,input().split()))
+    xy.append(cord)
+
+xy = sorted(xy)
+#print(xy)
+for i in range(n):
+    xy_str = str(xy[i])[1:-1]
+    print(xy_str.replace(",",""))
