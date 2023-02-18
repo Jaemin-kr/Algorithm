@@ -1,10 +1,13 @@
 
 
-board = []
-for i in range(20):
-    board.append([])
-    for j in range(20):
-        board[i].append(0)
+# board = []
+# for i in range(20):
+#     board.append([])
+#     for j in range(20):
+#         board[i].append(0)
+
+#list comprehension
+board = [[0 for j in range(20)] for i in range(20)]
 
 n = int(input())
 for i in range(n):
