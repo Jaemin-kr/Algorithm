@@ -1,7 +1,7 @@
 a, m, d, n = map(int, input().split())
-ans = 0
+#ans = 0
 for i in range(1, n+1):
-    print("before ans", ans)
+    #print("before ans", ans)
     if n == 1:
         print(a)
     elif i == n:
