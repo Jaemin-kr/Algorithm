@@ -9,6 +9,7 @@ for i in range(n):
 
 new_arr = sorted(arr)
 common = Counter(new_arr).most_common()
+print("결과")
 print(int(round(sum(arr)/n,0)))
 if n == 1:
     print(new_arr[0])
