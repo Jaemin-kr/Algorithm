@@ -32,10 +32,5 @@ int main(){
             }
         }
     }
-
     cout << cnt;
-
-    
-
-
 }
