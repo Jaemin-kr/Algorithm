@@ -4,6 +4,7 @@ from collections import deque
 input = sys.stdin.readline
 
 board = []
+
 dx = [1,0,-1,0]
 dy = [0,1,0,-1]
 
@@ -15,7 +16,11 @@ for i in range(n):
 
 print(board)
 
-def bfs():
+def bfs(x, y):
+    queue = deque()
+    queue.append((x,y))
+    visited[x][y] = True
+
 #board = [[0] * 10 for _ in range(10)]
 
 # board = []
