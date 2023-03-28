@@ -1,13 +1,22 @@
+import sys
+from collections import deque
+input = sys.stdin.readline
 
-xy = []
 n = int(input())
+tower = list(map(int, input().split()))
+ans = []
+stack = []
+
 
 for i in range(n):
-    cord = list(map(int,input().split()))
-    xy.append(cord)
+    while stack:
+        if stack[-1][1] > tower[i]:
+            ans.append(stack[-1][0]+1)
+        else:
+            stack.pop()
+    if not stack:
+        ans.append(0)
+    stack.append([i, tower[i]])
 
-xy = sorted(xy)
-#print(xy)
-for i in range(n):
-    xy_str = str(xy[i])[1:-1]
-    print(xy_str.replace(",",""))
+print("".join(map(str, ans)))
+    
